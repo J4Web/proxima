@@ -5,7 +5,7 @@ import WalletManager from '../walletManager/page'
 
 
 export default function NetworkWallet({ params }: { params: { network: string } }) {
-  const validNetworks = ['sol', 'eth', 'moi']
+  const validNetworks = ['sol', 'eth']
   const network = params.network.toLowerCase()
 
   if (!validNetworks.includes(network)) {
@@ -15,7 +15,7 @@ export default function NetworkWallet({ params }: { params: { network: string } 
   const networkNames = {
     sol: 'Solana',
     eth: 'Ethereum',
-    moi: 'MOI'
+    // moi: 'MOI'
   }
 
   return (

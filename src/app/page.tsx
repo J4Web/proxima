@@ -25,11 +25,11 @@ export default function Home() {
               Ethereum <ArrowUpRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <Link href="/moi" passHref legacyBehavior>
+          {/* <Link href="/moi" passHref legacyBehavior>
             <Button className="px-6 py-2">
               MOI <ArrowUpRight className="ml-2 h-4 w-4" />
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </main>
 

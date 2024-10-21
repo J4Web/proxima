@@ -32,18 +32,18 @@ class DbService {
         });
     }
 
-    public async saveMnemonicToDB(mnemonic: string, keyPairs: { idx: number, publicKey: string, privateKey: string }[]) {
+    public async saveMnemonicToDB(mnemonic: string, keyPairs: { idx: number, publicKey: string, privateKey: string }[], network: string) {
         const db = await this.initDB();
         const store = db.transaction(this.STORE_NAME, 'readwrite').objectStore(this.STORE_NAME);
-        const existingData = (await store.get('sol')) || {};
+        const existingData = (await store.get(network)) || {};
         existingData[mnemonic] = { keyPairs };
-        await store.put(existingData, 'sol');
+        await store.put(existingData, network);
     }
 
-    public async getMnemonicFromDB() {
+    public async getMnemonicFromDB(network: string) {
         const db = await this.initDB();
         const store = db.transaction(this.STORE_NAME, 'readonly').objectStore(this.STORE_NAME);
-        const data = await store.get('sol');
+        const data = await store.get(network);
         return data;
     }
 
