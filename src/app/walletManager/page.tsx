@@ -23,6 +23,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/Dialog"
+import { Navbar } from '../components/Navbar'
 
 
 interface Wallet {
@@ -191,22 +192,11 @@ export default function WalletManager({ title, brandName, network }: WalletManag
     setWallets(newWallets);
   }
 
-  console.log(wallets, "wtf")
 
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
-      <header className="p-4 flex justify-between items-center">
-        <div className="text-xl font-bold">{brandName}</div>
-        <div className="flex items-center space-x-4">
-          <button className="text-white hover:text-gray-300">
-            <Github className="h-5 w-5" />
-          </button>
-          <Link href="/" className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            home <ArrowUpRight className="ml-1 h-4 w-4" />
-          </Link>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col">
+      <Navbar />
 
       <main className="flex-grow flex flex-col items-center justify-start px-4 pt-8">
         <h1 className="text-4xl font-bold mb-8">{title} Wallets</h1>
@@ -278,7 +268,7 @@ export default function WalletManager({ title, brandName, network }: WalletManag
                 </motion.div>
               )}
             </AnimatePresence>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl mb-4">
               <AnimatePresence>
                 {wallets.map((wallet, idx) => (
                   <motion.div
