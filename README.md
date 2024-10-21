@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proxima Wallet
 
-## Getting Started
+Welcome to **Proxima Wallet**, a web-based tool for generating disposable testnet wallets. Inspired by temporary email services, Proxima Wallet allows you to create temporary HD wallets with ease, enabling you to test and build your projects effortlessly!
 
-First, run the development server:
+![Proxima Wallet Hero Image](./appimgs/hero-page.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Disposable Testnet Wallets**: Create temporary wallets for Ethereum and Solana without any hassle.
+- **HD Wallet Generation**: Easily generate Hierarchical Deterministic (HD) wallets for secure key management.
+- **Seamless User Experience**: Built with Next.js and styled using Tailwind CSS for a modern and responsive interface.
+- **IndexedDB Support**: Utilize IndexedDB for efficient storage and retrieval of wallet data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: A React framework for server-rendered applications.
+- **TypeScript**: For type safety and improved development experience.
+- **ethers.js**: To interact with the Ethereum blockchain.
+- **solana@web3.js**: For Solana blockchain interactions.
+- **IndexedDB**: For local storage of wallet information.
+- **Tailwind CSS**: For a sleek and modern UI.
 
-## Learn More
+## How It Works
 
-To learn more about Next.js, take a look at the following resources:
+Proxima Wallet simplifies wallet generation by providing a user-friendly interface that allows you to create wallets in just a few clicks. With our tool, you can:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Generate an HD wallet using a mnemonic phrase.
+2. Access your wallets for testing purposes.
+3. Receive automatic faucet transfers to your generated wallets.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Ethereum Wallet Page](./appimgs/eth-page.png)
+![Solana Wallet Page](./appimgs/sol-page.png)
