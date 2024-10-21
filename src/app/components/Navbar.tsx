@@ -8,9 +8,9 @@ export function Navbar() {
       <Link href="/" className="text-xl font-bold">
         Proxima
       </Link>
-      <nav className="flex items-center space-x-4">
+      <nav className="flex items-center space-x-2">
         <Button variant="ghost" size="icon" >
-          <Link href="https://github.com/your-repo-url" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/J4Web/proxima" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5" />
           </Link>
         </Button>
