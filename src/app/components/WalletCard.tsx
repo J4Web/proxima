@@ -17,7 +17,6 @@ interface IProps {
 
 
 export function WalletCard({ wallet, onRemove, idx }: IProps) {
-  console.log("WalletCard", wallet)
 
   const [showPrivateKey, setShowPrivateKey] = useState(false)
 

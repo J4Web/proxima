@@ -125,7 +125,6 @@ export default function WalletManager({ title, brandName, network }: WalletManag
       let mnemonic = '';
       let keyPairs = [];
       const existingData = await dbService.getMnemonicFromDB(network);
-      console.log(existingData, "existingData");
       if (existingData && Object.keys(existingData).length > 0) {
         mnemonic = Object.keys(existingData)[0];
         keyPairs = existingData[mnemonic].keyPairs;
