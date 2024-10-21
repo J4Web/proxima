@@ -79,7 +79,7 @@ export default function WalletManager({ title, brandName, network }: WalletManag
   const generateKeysFromMnemonic = (mnemonic: string) => {
 
     if (network == 'sol') {
-      const seed = bip39.mnemonicToSeedSync(mnemonic).slice(0, 32);
+      const seed = bip39.mnemonicToSeedSync(mnemonic);
       const idx = wallets.length;
       const path = `m/44'/501'/${idx}'/0'`;
       const derivedSeed = derivePath(path, seed.toString("hex")).key;
