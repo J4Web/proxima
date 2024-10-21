@@ -235,7 +235,7 @@ export default function WalletManager({ title, brandName, network }: WalletManag
             variant="bright"
             className='whitespace-nowrap mt-4 custom492:m-0'
           >
-            Claim {title.slice(0, 3)} Faucet
+            Claim {title?.slice(0, 3)} Faucet
           </Button>
 
         </div>
