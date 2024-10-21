@@ -1,4 +1,4 @@
-import {  Trash2, Eye, EyeOff } from 'lucide-react'
+import { Trash2, Eye, EyeOff } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from './Button'
 
@@ -7,18 +7,25 @@ interface Wallet {
   name: string
   publicKey: string
   privateKey: string
+  keyPairs?: { index: number, publicKey: string, privateKey: string }[],
+}
+interface IProps {
+  wallet: Wallet
+  onRemove: (id: string) => void
+  idx: number
 }
 
 
-export function WalletCard({ wallet, onRemove }: { wallet: Wallet, onRemove: (id: string) => void }) {
+export function WalletCard({ wallet, onRemove, idx }: IProps) {
+  console.log("WalletCard", wallet)
 
   const [showPrivateKey, setShowPrivateKey] = useState(false)
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg">
       <div className="flex justify-between items-center mb-2">
-        <h3 className="text-lg font-semibold">{wallet.name}</h3>
-        <Button variant="ghost" size="sm" disabled={wallet.name=='Wallet 1'} onClick={() => onRemove(wallet.id)} className="text-red-500 hover:text-red-400">
+        <h3 className="text-lg font-semibold">{`Wallet ${idx}`}</h3>
+        <Button variant="ghost" size="sm" disabled={idx == 0} onClick={() => onRemove(wallet.id)} className="text-red-500 hover:text-red-400">
           <Trash2 size={16} />
         </Button>
       </div>
