@@ -19,6 +19,8 @@ Welcome to **Proxima Wallet**, a web-based tool for generating disposable testne
 - **solana@web3.js**: For Solana blockchain interactions.
 - **IndexedDB**: For local storage of wallet information.
 - **Tailwind CSS**: For a sleek and modern UI.
+- **Framer Motion**: For smooth transitions.
+
 
 ## How It Works
 
